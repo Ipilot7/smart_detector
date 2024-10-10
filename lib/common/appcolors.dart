@@ -9,4 +9,6 @@ class AppColors {
   static const yellow = Color(0xffFFF500);
   static const orange = Color(0xffFF6B00);
   static const grey = Color(0xff3D3E43);
+  static const greyLight = Color(0xffEFEFEF);
+  static const btnTextColor = Color(0xff212326);
 }

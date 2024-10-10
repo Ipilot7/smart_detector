@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smart_detector/presentation/page/home.dart';
 import 'package:smart_detector/presentation/page/splash.dart';
+import 'package:smart_detector/presentation/page/term_and_conditions.dart';
 
 class Routes {
   static String get termsAndCondition => '/termsAndCondition';
@@ -40,6 +41,14 @@ class AppRouter {
           context: context,
           state: state,
           child: const SplashPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.termsAndCondition,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const TermsAndConditions(),
         ),
       ),
       GoRoute(

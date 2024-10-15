@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_detector/common/app_text_style.dart';
-import 'package:smart_detector/common/appcolors.dart';
 import 'package:smart_detector/common/assets.gen.dart';
+import 'package:smart_detector/common/components/settings_switcher.dart';
 import 'package:smart_detector/common/custom_button.dart';
 import 'package:smart_detector/common/extentions/extention.dart';
-import 'package:smart_detector/presentation/widgets/custom_switcher.dart';
+import 'package:smart_detector/common/routes.dart';
 
 class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({super.key});
@@ -20,9 +21,6 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        centerTitle: true,
-        backgroundColor: AppColors.backgroundColor,
-        elevation: 0,
         title: Text(
           "Привет, Smart Detector!",
           style: AppTextStyles.body20w5,
@@ -58,27 +56,19 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Подписать",
-                  style: AppTextStyles.body15wb,
-                ),
-                CustomSwicher(
-                  value: isActive,
-                  onChanged: (value) {
-                    isActive = value;
-                    setState(() {});
-                  },
-                )
-              ],
+            SettingsSwitcher(
+              isActive: isActive,
+              text: 'Подписать',
+              onChanged: (p0) {
+                isActive = p0;
+                setState(() {});
+              },
             ),
             CustomButton(
               isActive: isActive,
               onPressed: () {
                 if (isActive) {
-                  //todo
+                  context.push(Routes.permissions);
                 }
               },
               text: 'Продолжить',

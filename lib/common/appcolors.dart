@@ -11,4 +11,5 @@ class AppColors {
   static const grey = Color(0xff3D3E43);
   static const greyLight = Color(0xffEFEFEF);
   static const btnTextColor = Color(0xff212326);
+  static const blue = Color(0xff00A3FF);
 }

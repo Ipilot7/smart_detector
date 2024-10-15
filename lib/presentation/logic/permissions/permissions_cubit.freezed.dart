@@ -16,14 +16,14 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$PermissionsState {
-  BlocStatus get trialTestStatus => throw _privateConstructorUsedError;
-  String? get message => throw _privateConstructorUsedError;
-  bool? get isNotifications => throw _privateConstructorUsedError;
-  bool? get isGeolocations => throw _privateConstructorUsedError;
-  bool? get isBackgroundGeolocation => throw _privateConstructorUsedError;
-  bool? get isForegroundApps => throw _privateConstructorUsedError;
-  bool? get isBluetoothOn => throw _privateConstructorUsedError;
-  bool? get isShareInformation => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
+  bool get isNotifications => throw _privateConstructorUsedError;
+  bool get isGeolocations => throw _privateConstructorUsedError;
+  bool get isBackgroundGeolocation => throw _privateConstructorUsedError;
+  bool get isForegroundApps => throw _privateConstructorUsedError;
+  bool get isBluetoothOn => throw _privateConstructorUsedError;
+  bool get isShareInformation => throw _privateConstructorUsedError;
+  bool get isAllChanged => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PermissionsStateCopyWith<PermissionsState> get copyWith =>
@@ -37,14 +37,14 @@ abstract class $PermissionsStateCopyWith<$Res> {
       _$PermissionsStateCopyWithImpl<$Res, PermissionsState>;
   @useResult
   $Res call(
-      {BlocStatus trialTestStatus,
-      String? message,
-      bool? isNotifications,
-      bool? isGeolocations,
-      bool? isBackgroundGeolocation,
-      bool? isForegroundApps,
-      bool? isBluetoothOn,
-      bool? isShareInformation});
+      {String message,
+      bool isNotifications,
+      bool isGeolocations,
+      bool isBackgroundGeolocation,
+      bool isForegroundApps,
+      bool isBluetoothOn,
+      bool isShareInformation,
+      bool isAllChanged});
 }
 
 /// @nodoc
@@ -60,48 +60,48 @@ class _$PermissionsStateCopyWithImpl<$Res, $Val extends PermissionsState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trialTestStatus = null,
-    Object? message = freezed,
-    Object? isNotifications = freezed,
-    Object? isGeolocations = freezed,
-    Object? isBackgroundGeolocation = freezed,
-    Object? isForegroundApps = freezed,
-    Object? isBluetoothOn = freezed,
-    Object? isShareInformation = freezed,
+    Object? message = null,
+    Object? isNotifications = null,
+    Object? isGeolocations = null,
+    Object? isBackgroundGeolocation = null,
+    Object? isForegroundApps = null,
+    Object? isBluetoothOn = null,
+    Object? isShareInformation = null,
+    Object? isAllChanged = null,
   }) {
     return _then(_value.copyWith(
-      trialTestStatus: null == trialTestStatus
-          ? _value.trialTestStatus
-          : trialTestStatus // ignore: cast_nullable_to_non_nullable
-              as BlocStatus,
-      message: freezed == message
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isNotifications: freezed == isNotifications
+              as String,
+      isNotifications: null == isNotifications
           ? _value.isNotifications
           : isNotifications // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isGeolocations: freezed == isGeolocations
+              as bool,
+      isGeolocations: null == isGeolocations
           ? _value.isGeolocations
           : isGeolocations // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isBackgroundGeolocation: freezed == isBackgroundGeolocation
+              as bool,
+      isBackgroundGeolocation: null == isBackgroundGeolocation
           ? _value.isBackgroundGeolocation
           : isBackgroundGeolocation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isForegroundApps: freezed == isForegroundApps
+              as bool,
+      isForegroundApps: null == isForegroundApps
           ? _value.isForegroundApps
           : isForegroundApps // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isBluetoothOn: freezed == isBluetoothOn
+              as bool,
+      isBluetoothOn: null == isBluetoothOn
           ? _value.isBluetoothOn
           : isBluetoothOn // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isShareInformation: freezed == isShareInformation
+              as bool,
+      isShareInformation: null == isShareInformation
           ? _value.isShareInformation
           : isShareInformation // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
+      isAllChanged: null == isAllChanged
+          ? _value.isAllChanged
+          : isAllChanged // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -115,14 +115,14 @@ abstract class _$$PermissionsStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BlocStatus trialTestStatus,
-      String? message,
-      bool? isNotifications,
-      bool? isGeolocations,
-      bool? isBackgroundGeolocation,
-      bool? isForegroundApps,
-      bool? isBluetoothOn,
-      bool? isShareInformation});
+      {String message,
+      bool isNotifications,
+      bool isGeolocations,
+      bool isBackgroundGeolocation,
+      bool isForegroundApps,
+      bool isBluetoothOn,
+      bool isShareInformation,
+      bool isAllChanged});
 }
 
 /// @nodoc
@@ -136,48 +136,48 @@ class __$$PermissionsStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trialTestStatus = null,
-    Object? message = freezed,
-    Object? isNotifications = freezed,
-    Object? isGeolocations = freezed,
-    Object? isBackgroundGeolocation = freezed,
-    Object? isForegroundApps = freezed,
-    Object? isBluetoothOn = freezed,
-    Object? isShareInformation = freezed,
+    Object? message = null,
+    Object? isNotifications = null,
+    Object? isGeolocations = null,
+    Object? isBackgroundGeolocation = null,
+    Object? isForegroundApps = null,
+    Object? isBluetoothOn = null,
+    Object? isShareInformation = null,
+    Object? isAllChanged = null,
   }) {
     return _then(_$PermissionsStateImpl(
-      trialTestStatus: null == trialTestStatus
-          ? _value.trialTestStatus
-          : trialTestStatus // ignore: cast_nullable_to_non_nullable
-              as BlocStatus,
-      message: freezed == message
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isNotifications: freezed == isNotifications
+              as String,
+      null == isNotifications
           ? _value.isNotifications
           : isNotifications // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isGeolocations: freezed == isGeolocations
+              as bool,
+      null == isGeolocations
           ? _value.isGeolocations
           : isGeolocations // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isBackgroundGeolocation: freezed == isBackgroundGeolocation
+              as bool,
+      null == isBackgroundGeolocation
           ? _value.isBackgroundGeolocation
           : isBackgroundGeolocation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isForegroundApps: freezed == isForegroundApps
+              as bool,
+      null == isForegroundApps
           ? _value.isForegroundApps
           : isForegroundApps // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isBluetoothOn: freezed == isBluetoothOn
+              as bool,
+      null == isBluetoothOn
           ? _value.isBluetoothOn
           : isBluetoothOn // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isShareInformation: freezed == isShareInformation
+              as bool,
+      null == isShareInformation
           ? _value.isShareInformation
           : isShareInformation // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
+      null == isAllChanged
+          ? _value.isAllChanged
+          : isAllChanged // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -186,37 +186,36 @@ class __$$PermissionsStateImplCopyWithImpl<$Res>
 
 class _$PermissionsStateImpl extends _PermissionsState {
   const _$PermissionsStateImpl(
-      {this.trialTestStatus = BlocStatus.notInitialized,
       this.message,
       this.isNotifications,
       this.isGeolocations,
       this.isBackgroundGeolocation,
       this.isForegroundApps,
       this.isBluetoothOn,
-      this.isShareInformation})
+      this.isShareInformation,
+      this.isAllChanged)
       : super._();
 
   @override
-  @JsonKey()
-  final BlocStatus trialTestStatus;
+  final String message;
   @override
-  final String? message;
+  final bool isNotifications;
   @override
-  final bool? isNotifications;
+  final bool isGeolocations;
   @override
-  final bool? isGeolocations;
+  final bool isBackgroundGeolocation;
   @override
-  final bool? isBackgroundGeolocation;
+  final bool isForegroundApps;
   @override
-  final bool? isForegroundApps;
+  final bool isBluetoothOn;
   @override
-  final bool? isBluetoothOn;
+  final bool isShareInformation;
   @override
-  final bool? isShareInformation;
+  final bool isAllChanged;
 
   @override
   String toString() {
-    return 'PermissionsState(trialTestStatus: $trialTestStatus, message: $message, isNotifications: $isNotifications, isGeolocations: $isGeolocations, isBackgroundGeolocation: $isBackgroundGeolocation, isForegroundApps: $isForegroundApps, isBluetoothOn: $isBluetoothOn, isShareInformation: $isShareInformation)';
+    return 'PermissionsState(message: $message, isNotifications: $isNotifications, isGeolocations: $isGeolocations, isBackgroundGeolocation: $isBackgroundGeolocation, isForegroundApps: $isForegroundApps, isBluetoothOn: $isBluetoothOn, isShareInformation: $isShareInformation, isAllChanged: $isAllChanged)';
   }
 
   @override
@@ -224,8 +223,6 @@ class _$PermissionsStateImpl extends _PermissionsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PermissionsStateImpl &&
-            (identical(other.trialTestStatus, trialTestStatus) ||
-                other.trialTestStatus == trialTestStatus) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.isNotifications, isNotifications) ||
                 other.isNotifications == isNotifications) &&
@@ -239,20 +236,22 @@ class _$PermissionsStateImpl extends _PermissionsState {
             (identical(other.isBluetoothOn, isBluetoothOn) ||
                 other.isBluetoothOn == isBluetoothOn) &&
             (identical(other.isShareInformation, isShareInformation) ||
-                other.isShareInformation == isShareInformation));
+                other.isShareInformation == isShareInformation) &&
+            (identical(other.isAllChanged, isAllChanged) ||
+                other.isAllChanged == isAllChanged));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      trialTestStatus,
       message,
       isNotifications,
       isGeolocations,
       isBackgroundGeolocation,
       isForegroundApps,
       isBluetoothOn,
-      isShareInformation);
+      isShareInformation,
+      isAllChanged);
 
   @JsonKey(ignore: true)
   @override
@@ -264,32 +263,32 @@ class _$PermissionsStateImpl extends _PermissionsState {
 
 abstract class _PermissionsState extends PermissionsState {
   const factory _PermissionsState(
-      {final BlocStatus trialTestStatus,
-      final String? message,
-      final bool? isNotifications,
-      final bool? isGeolocations,
-      final bool? isBackgroundGeolocation,
-      final bool? isForegroundApps,
-      final bool? isBluetoothOn,
-      final bool? isShareInformation}) = _$PermissionsStateImpl;
+      final String message,
+      final bool isNotifications,
+      final bool isGeolocations,
+      final bool isBackgroundGeolocation,
+      final bool isForegroundApps,
+      final bool isBluetoothOn,
+      final bool isShareInformation,
+      final bool isAllChanged) = _$PermissionsStateImpl;
   const _PermissionsState._() : super._();
 
   @override
-  BlocStatus get trialTestStatus;
+  String get message;
   @override
-  String? get message;
+  bool get isNotifications;
   @override
-  bool? get isNotifications;
+  bool get isGeolocations;
   @override
-  bool? get isGeolocations;
+  bool get isBackgroundGeolocation;
   @override
-  bool? get isBackgroundGeolocation;
+  bool get isForegroundApps;
   @override
-  bool? get isForegroundApps;
+  bool get isBluetoothOn;
   @override
-  bool? get isBluetoothOn;
+  bool get isShareInformation;
   @override
-  bool? get isShareInformation;
+  bool get isAllChanged;
   @override
   @JsonKey(ignore: true)
   _$$PermissionsStateImplCopyWith<_$PermissionsStateImpl> get copyWith =>

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:smart_detector/presentation/page/connect_to_device.dart';
+import 'package:smart_detector/presentation/page/device.dart';
 import 'package:smart_detector/presentation/page/home.dart';
 import 'package:smart_detector/presentation/page/permissions.dart';
+import 'package:smart_detector/presentation/page/search_detector.dart';
 import 'package:smart_detector/presentation/page/splash.dart';
 import 'package:smart_detector/presentation/page/term_and_conditions.dart';
 
@@ -11,6 +14,7 @@ class Routes {
   static String get permissions => '/permissions';
   static String get connectToDetector => '/connectToDetector';
   static String get searchDetector => '/searchDetector';
+  static String get device => '/device';
   static String get settings => '/settings';
   static String get operatingMode => '/operatingMode';
   static String get profile => '/profile';
@@ -66,6 +70,30 @@ class AppRouter {
           context: context,
           state: state,
           child: const PermissionsPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.connectToDetector,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const ConnnectDevicePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.searchDetector,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const SearchDetectorPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.device,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const DevicePage(),
         ),
       ),
     ],

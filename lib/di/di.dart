@@ -4,7 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:smart_detector/common/locale_data/hive_keys.dart';
 import 'package:smart_detector/common/locale_data/locale_model.dart';
-import 'package:smart_detector/presentation/logic/cubit/permissions_cubit.dart';
+import 'package:smart_detector/presentation/logic/permissions/permissions_cubit.dart';
 
 final di = GetIt.instance;
 

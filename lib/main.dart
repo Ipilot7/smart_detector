@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smart_detector/common/routes.dart';
 import 'package:smart_detector/common/theme.dart';
+import 'package:smart_detector/di/di.dart';
+import 'package:smart_detector/presentation/logic/cubit/permissions_cubit.dart';
 
 void main() {
+  init();
   runApp(const MyApp());
 }
 
@@ -13,9 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appRouter = AppRouter();
-    return MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        routerConfig: appRouter.router,
-        theme: ThemeDataExt.darkTheme);
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => di<PermissionsCubit>()),
+      ],
+      child: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          routerConfig: appRouter.router,
+          theme: ThemeDataExt.darkTheme),
+    );
   }
 }

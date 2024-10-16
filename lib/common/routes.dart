@@ -5,6 +5,8 @@ import 'package:smart_detector/presentation/page/device.dart';
 import 'package:smart_detector/presentation/page/home.dart';
 import 'package:smart_detector/presentation/page/permissions.dart';
 import 'package:smart_detector/presentation/page/search_detector.dart';
+import 'package:smart_detector/presentation/page/settings/operating_mode.dart';
+import 'package:smart_detector/presentation/page/settings/profile.dart';
 import 'package:smart_detector/presentation/page/settings/settings.dart';
 import 'package:smart_detector/presentation/page/splash.dart';
 import 'package:smart_detector/presentation/page/term_and_conditions.dart';
@@ -103,6 +105,22 @@ class AppRouter {
           context: context,
           state: state,
           child: const SettingsPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.operatingMode,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const OperatingModePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.profile,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const ProfilePage(),
         ),
       ),
     ],

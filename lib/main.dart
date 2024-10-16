@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smart_detector/common/routes.dart';
 import 'package:smart_detector/common/theme.dart';
 import 'package:smart_detector/di/di.dart';
+import 'package:smart_detector/presentation/logic/bloc/settings_bloc.dart';
 import 'package:smart_detector/presentation/logic/permissions/permissions_cubit.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => di<PermissionsCubit>()),
+        BlocProvider(create: (context) => di<SettingsBloc>()),
       ],
       child: MaterialApp.router(
           debugShowCheckedModeBanner: false,

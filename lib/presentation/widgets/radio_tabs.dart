@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:smart_detector/common/app_text_style.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:smart_detector/common/components/textx.dart';
+import 'package:smart_detector/common/enums/settings_status.dart';
 import 'package:smart_detector/common/extentions/extention.dart';
+import 'package:smart_detector/presentation/logic/bloc/settings_bloc.dart';
 import 'package:smart_detector/presentation/widgets/custom_radio.dart';
-
-enum SingingCharacter { sound, foregroundApps }
 
 class RadioTabs extends StatefulWidget {
   const RadioTabs({super.key});
@@ -13,44 +14,35 @@ class RadioTabs extends StatefulWidget {
 }
 
 class _RadioTabsState extends State<RadioTabs> {
-  SingingCharacter _character = SingingCharacter.sound;
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Row(
-          children: [
-            CustomRadio(
-                value: SingingCharacter.foregroundApps,
-                groupValue: _character,
-                onChanged: (value) => setState(() {
-                      _character = value;
-                    })),
-            8.g,
-            Text(
-              'Только звук',
-              style: AppTextStyles.body15w5,
+    return BlocBuilder<SettingsBloc, SettingsState>(
+      builder: (context, state) {
+        return ListView.builder(
+          shrinkWrap: true,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
+          itemCount: SettingsStatus.values.length,
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: Row(
+              children: [
+                CustomRadio(
+                    value: SettingsStatus.values[index],
+                    onChanged: (value) {
+                      context
+                          .read<SettingsBloc>()
+                          .add(ChangeSettingsEvent(value));
+                    },
+                    groupValue: state.settingsStatus),
+                8.g,
+                TextX(SettingsStatus.values[index].name)
+              ],
             ),
-          ],
-        ),
-        16.g,
-        Row(
-          children: [
-            CustomRadio<SingingCharacter>(
-                value: SingingCharacter.foregroundApps,
-                groupValue: _character,
-                onChanged: (value) => setState(() {
-                      _character = value;
-                    })),
-            8.g,
-            Text(
-              'Поверх других приложений',
-              style: AppTextStyles.body15w5,
-            ),
-          ],
-        ),
-      ],
+          ),
+        );
+      },
     );
   }
 }

@@ -102,6 +102,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/arrow_left.svg
   SvgGenImage get arrowLeft => const SvgGenImage('assets/icons/arrow_left.svg');
 
+  /// File path: assets/icons/home_prosessor.svg
+  SvgGenImage get homeProsessor =>
+      const SvgGenImage('assets/icons/home_prosessor.svg');
+
   /// File path: assets/icons/minus.svg
   SvgGenImage get minus => const SvgGenImage('assets/icons/minus.svg');
 
@@ -111,6 +115,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/prosessor.svg
   SvgGenImage get prosessor => const SvgGenImage('assets/icons/prosessor.svg');
 
+  /// File path: assets/icons/right.svg
+  SvgGenImage get right => const SvgGenImage('assets/icons/right.svg');
+
   /// File path: assets/icons/settings.svg
   SvgGenImage get settings => const SvgGenImage('assets/icons/settings.svg');
 
@@ -118,8 +125,16 @@ class $AssetsIconsGen {
   SvgGenImage get sound => const SvgGenImage('assets/icons/sound.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [arrowLeft, minus, plus, prosessor, settings, sound];
+  List<SvgGenImage> get values => [
+        arrowLeft,
+        homeProsessor,
+        minus,
+        plus,
+        prosessor,
+        right,
+        settings,
+        sound
+      ];
 }
 
 class $AssetsImagesGen {
@@ -128,6 +143,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Smart Detector logo.png
   AssetGenImage get smartDetectorLogo =>
       const AssetGenImage('assets/images/Smart Detector logo.png');
+
+  /// File path: assets/images/inspector.png
+  AssetGenImage get inspector =>
+      const AssetGenImage('assets/images/inspector.png');
 
   /// File path: assets/images/processor_bluetooth.png
   AssetGenImage get processorBluetooth =>
@@ -156,6 +175,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         smartDetectorLogo,
+        inspector,
         processorBluetooth,
         processorError,
         processorHello,

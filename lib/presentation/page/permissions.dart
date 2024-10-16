@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:smart_detector/common/app_text_style.dart';
 import 'package:smart_detector/common/assets.gen.dart';
 import 'package:smart_detector/common/components/settings_switcher.dart';
-import 'package:smart_detector/common/custom_button.dart';
+import 'package:smart_detector/common/components/custom_button.dart';
 import 'package:smart_detector/common/extentions/extention.dart';
 import 'package:smart_detector/common/routes.dart';
 import 'package:smart_detector/presentation/logic/permissions/permissions_cubit.dart';

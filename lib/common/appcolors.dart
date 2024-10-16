@@ -12,4 +12,6 @@ class AppColors {
   static const greyLight = Color(0xffEFEFEF);
   static const btnTextColor = Color(0xff212326);
   static const blue = Color(0xff00A3FF);
+  static const trailingColor = Color(0xffA1A1A1);
+  static const radioBorder = Color(0xff444444);
 }

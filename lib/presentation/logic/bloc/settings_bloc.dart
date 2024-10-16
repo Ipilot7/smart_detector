@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:smart_detector/common/enums/kdiapazon_status.dart';
 import 'package:smart_detector/common/enums/operation_mode_status.dart';
 import 'package:smart_detector/common/enums/profile_status.dart';
 import 'package:smart_detector/common/enums/settings_status.dart';
@@ -11,13 +12,35 @@ part 'settings_state.dart';
 
 class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
   SettingsBloc()
-      : super(const SettingsState(OperationModeStatus.smart, false, false,
-            ProfileStatus.russia, SettingsStatus.sound)) {
+      : super(const SettingsState(
+            OperationModeStatus.smart,
+            false,
+            false,
+            ProfileStatus.russia,
+            SettingsStatus.sound,
+            0,
+            false,
+            false,
+            KordonStatus.cityAndTrass,
+            KordonStatus.cityAndTrass,
+            0,
+            0,
+            40,
+            70)) {
     on<ChangeOperationModeEvent>(_changeOperationMode);
     on<ChageAutoMuteEvent>(_chageAutoMuteEvent);
     on<ChageWorkOnForegroundEvent>(_chageWorkOnForegroundEvent);
     on<ChangeProfileEvent>(_changeProfile);
     on<ChangeSettingsEvent>(_changeSettings);
+    on<ChangeSliderEvent>(_changeSlider);
+    on<ChangeKDiapazonEvent>(_changeKDiapazon);
+    on<ChangeKardonEvent>(_changeKardon);
+    on<ChangeKDiapazonStatusEvent>(_chageKDiapazonStatus);
+    on<ChangeKardonStatusEvent>(_changeKardonStatus);
+    on<ChangeSensivityCityEvent>(_changeSensivityCity);
+    on<ChangeSensivityTrassEvent>(_changeSensivityTrass);
+    on<ChangeSmartCityTrassEvent>(_changeSmartCityTrass);
+    on<ChangeOffRadarDetectorEvent>(_changeOffRadarDetector);
   }
 
   _changeOperationMode(ChangeOperationModeEvent event, emit) {
@@ -38,5 +61,49 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
 
   _changeSettings(ChangeSettingsEvent event, emit) {
     emit(state.copyWith(settingsStatus: event.value));
+  }
+
+  _changeSlider(ChangeSliderEvent event, emit) {
+    emit(state.copyWith(currentSliderValue: event.value));
+  }
+
+  _changeKDiapazon(ChangeKDiapazonEvent event, emit) {
+    emit(state.copyWith(kDiapazon: event.value));
+  }
+
+  _changeKardon(ChangeKardonEvent event, emit) {
+    emit(state.copyWith(kardon: event.value));
+  }
+
+  _chageKDiapazonStatus(ChangeKDiapazonStatusEvent event, emit) {
+    emit(state.copyWith(kDiapazonStatus: event.value));
+  }
+
+  _changeKardonStatus(ChangeKardonStatusEvent event, emit) {
+    emit(state.copyWith(kordonStatus: event.value));
+  }
+
+  _changeSensivityCity(ChangeSensivityCityEvent event, emit) {
+    emit(state.copyWith(sensivityCity: event.value));
+  }
+
+  _changeSensivityTrass(ChangeSensivityTrassEvent event, emit) {
+    emit(state.copyWith(sensivityTrass: event.value));
+  }
+
+  _changeSmartCityTrass(ChangeSmartCityTrassEvent event, emit) {
+    if (event.value) {
+      emit(state.copyWith(smartCityTrass: state.smartCityTrass + 1));
+    } else {
+      emit(state.copyWith(smartCityTrass: state.smartCityTrass - 1));
+    }
+  }
+
+  _changeOffRadarDetector(ChangeOffRadarDetectorEvent event, emit) {
+    if (event.value) {
+      emit(state.copyWith(offRadarDetector: state.offRadarDetector + 1));
+    } else {
+      emit(state.copyWith(offRadarDetector: state.offRadarDetector - 1));
+    }
   }
 }

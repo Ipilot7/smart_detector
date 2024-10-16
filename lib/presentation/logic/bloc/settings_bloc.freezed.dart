@@ -22,6 +22,15 @@ mixin _$SettingsState {
   bool get isForeground => throw _privateConstructorUsedError;
   ProfileStatus get profileStatus => throw _privateConstructorUsedError;
   SettingsStatus get settingsStatus => throw _privateConstructorUsedError;
+  double get currentSliderValue => throw _privateConstructorUsedError;
+  bool get kDiapazon => throw _privateConstructorUsedError;
+  bool get kardon => throw _privateConstructorUsedError;
+  KordonStatus get kDiapazonStatus => throw _privateConstructorUsedError;
+  KordonStatus get kordonStatus => throw _privateConstructorUsedError;
+  double get sensivityCity => throw _privateConstructorUsedError;
+  double get sensivityTrass => throw _privateConstructorUsedError;
+  int get offRadarDetector => throw _privateConstructorUsedError;
+  int get smartCityTrass => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingsStateCopyWith<SettingsState> get copyWith =>
@@ -39,7 +48,16 @@ abstract class $SettingsStateCopyWith<$Res> {
       bool isAvtomute,
       bool isForeground,
       ProfileStatus profileStatus,
-      SettingsStatus settingsStatus});
+      SettingsStatus settingsStatus,
+      double currentSliderValue,
+      bool kDiapazon,
+      bool kardon,
+      KordonStatus kDiapazonStatus,
+      KordonStatus kordonStatus,
+      double sensivityCity,
+      double sensivityTrass,
+      int offRadarDetector,
+      int smartCityTrass});
 }
 
 /// @nodoc
@@ -60,6 +78,15 @@ class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
     Object? isForeground = null,
     Object? profileStatus = null,
     Object? settingsStatus = null,
+    Object? currentSliderValue = null,
+    Object? kDiapazon = null,
+    Object? kardon = null,
+    Object? kDiapazonStatus = null,
+    Object? kordonStatus = null,
+    Object? sensivityCity = null,
+    Object? sensivityTrass = null,
+    Object? offRadarDetector = null,
+    Object? smartCityTrass = null,
   }) {
     return _then(_value.copyWith(
       operationModeStatus: null == operationModeStatus
@@ -82,6 +109,42 @@ class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
           ? _value.settingsStatus
           : settingsStatus // ignore: cast_nullable_to_non_nullable
               as SettingsStatus,
+      currentSliderValue: null == currentSliderValue
+          ? _value.currentSliderValue
+          : currentSliderValue // ignore: cast_nullable_to_non_nullable
+              as double,
+      kDiapazon: null == kDiapazon
+          ? _value.kDiapazon
+          : kDiapazon // ignore: cast_nullable_to_non_nullable
+              as bool,
+      kardon: null == kardon
+          ? _value.kardon
+          : kardon // ignore: cast_nullable_to_non_nullable
+              as bool,
+      kDiapazonStatus: null == kDiapazonStatus
+          ? _value.kDiapazonStatus
+          : kDiapazonStatus // ignore: cast_nullable_to_non_nullable
+              as KordonStatus,
+      kordonStatus: null == kordonStatus
+          ? _value.kordonStatus
+          : kordonStatus // ignore: cast_nullable_to_non_nullable
+              as KordonStatus,
+      sensivityCity: null == sensivityCity
+          ? _value.sensivityCity
+          : sensivityCity // ignore: cast_nullable_to_non_nullable
+              as double,
+      sensivityTrass: null == sensivityTrass
+          ? _value.sensivityTrass
+          : sensivityTrass // ignore: cast_nullable_to_non_nullable
+              as double,
+      offRadarDetector: null == offRadarDetector
+          ? _value.offRadarDetector
+          : offRadarDetector // ignore: cast_nullable_to_non_nullable
+              as int,
+      smartCityTrass: null == smartCityTrass
+          ? _value.smartCityTrass
+          : smartCityTrass // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -99,7 +162,16 @@ abstract class _$$SettingsStateImplCopyWith<$Res>
       bool isAvtomute,
       bool isForeground,
       ProfileStatus profileStatus,
-      SettingsStatus settingsStatus});
+      SettingsStatus settingsStatus,
+      double currentSliderValue,
+      bool kDiapazon,
+      bool kardon,
+      KordonStatus kDiapazonStatus,
+      KordonStatus kordonStatus,
+      double sensivityCity,
+      double sensivityTrass,
+      int offRadarDetector,
+      int smartCityTrass});
 }
 
 /// @nodoc
@@ -118,6 +190,15 @@ class __$$SettingsStateImplCopyWithImpl<$Res>
     Object? isForeground = null,
     Object? profileStatus = null,
     Object? settingsStatus = null,
+    Object? currentSliderValue = null,
+    Object? kDiapazon = null,
+    Object? kardon = null,
+    Object? kDiapazonStatus = null,
+    Object? kordonStatus = null,
+    Object? sensivityCity = null,
+    Object? sensivityTrass = null,
+    Object? offRadarDetector = null,
+    Object? smartCityTrass = null,
   }) {
     return _then(_$SettingsStateImpl(
       null == operationModeStatus
@@ -140,6 +221,42 @@ class __$$SettingsStateImplCopyWithImpl<$Res>
           ? _value.settingsStatus
           : settingsStatus // ignore: cast_nullable_to_non_nullable
               as SettingsStatus,
+      null == currentSliderValue
+          ? _value.currentSliderValue
+          : currentSliderValue // ignore: cast_nullable_to_non_nullable
+              as double,
+      null == kDiapazon
+          ? _value.kDiapazon
+          : kDiapazon // ignore: cast_nullable_to_non_nullable
+              as bool,
+      null == kardon
+          ? _value.kardon
+          : kardon // ignore: cast_nullable_to_non_nullable
+              as bool,
+      null == kDiapazonStatus
+          ? _value.kDiapazonStatus
+          : kDiapazonStatus // ignore: cast_nullable_to_non_nullable
+              as KordonStatus,
+      null == kordonStatus
+          ? _value.kordonStatus
+          : kordonStatus // ignore: cast_nullable_to_non_nullable
+              as KordonStatus,
+      null == sensivityCity
+          ? _value.sensivityCity
+          : sensivityCity // ignore: cast_nullable_to_non_nullable
+              as double,
+      null == sensivityTrass
+          ? _value.sensivityTrass
+          : sensivityTrass // ignore: cast_nullable_to_non_nullable
+              as double,
+      null == offRadarDetector
+          ? _value.offRadarDetector
+          : offRadarDetector // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == smartCityTrass
+          ? _value.smartCityTrass
+          : smartCityTrass // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -147,8 +264,21 @@ class __$$SettingsStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SettingsStateImpl extends _SettingsState {
-  const _$SettingsStateImpl(this.operationModeStatus, this.isAvtomute,
-      this.isForeground, this.profileStatus, this.settingsStatus)
+  const _$SettingsStateImpl(
+      this.operationModeStatus,
+      this.isAvtomute,
+      this.isForeground,
+      this.profileStatus,
+      this.settingsStatus,
+      this.currentSliderValue,
+      this.kDiapazon,
+      this.kardon,
+      this.kDiapazonStatus,
+      this.kordonStatus,
+      this.sensivityCity,
+      this.sensivityTrass,
+      this.offRadarDetector,
+      this.smartCityTrass)
       : super._();
 
   @override
@@ -161,10 +291,28 @@ class _$SettingsStateImpl extends _SettingsState {
   final ProfileStatus profileStatus;
   @override
   final SettingsStatus settingsStatus;
+  @override
+  final double currentSliderValue;
+  @override
+  final bool kDiapazon;
+  @override
+  final bool kardon;
+  @override
+  final KordonStatus kDiapazonStatus;
+  @override
+  final KordonStatus kordonStatus;
+  @override
+  final double sensivityCity;
+  @override
+  final double sensivityTrass;
+  @override
+  final int offRadarDetector;
+  @override
+  final int smartCityTrass;
 
   @override
   String toString() {
-    return 'SettingsState(operationModeStatus: $operationModeStatus, isAvtomute: $isAvtomute, isForeground: $isForeground, profileStatus: $profileStatus, settingsStatus: $settingsStatus)';
+    return 'SettingsState(operationModeStatus: $operationModeStatus, isAvtomute: $isAvtomute, isForeground: $isForeground, profileStatus: $profileStatus, settingsStatus: $settingsStatus, currentSliderValue: $currentSliderValue, kDiapazon: $kDiapazon, kardon: $kardon, kDiapazonStatus: $kDiapazonStatus, kordonStatus: $kordonStatus, sensivityCity: $sensivityCity, sensivityTrass: $sensivityTrass, offRadarDetector: $offRadarDetector, smartCityTrass: $smartCityTrass)';
   }
 
   @override
@@ -181,12 +329,43 @@ class _$SettingsStateImpl extends _SettingsState {
             (identical(other.profileStatus, profileStatus) ||
                 other.profileStatus == profileStatus) &&
             (identical(other.settingsStatus, settingsStatus) ||
-                other.settingsStatus == settingsStatus));
+                other.settingsStatus == settingsStatus) &&
+            (identical(other.currentSliderValue, currentSliderValue) ||
+                other.currentSliderValue == currentSliderValue) &&
+            (identical(other.kDiapazon, kDiapazon) ||
+                other.kDiapazon == kDiapazon) &&
+            (identical(other.kardon, kardon) || other.kardon == kardon) &&
+            (identical(other.kDiapazonStatus, kDiapazonStatus) ||
+                other.kDiapazonStatus == kDiapazonStatus) &&
+            (identical(other.kordonStatus, kordonStatus) ||
+                other.kordonStatus == kordonStatus) &&
+            (identical(other.sensivityCity, sensivityCity) ||
+                other.sensivityCity == sensivityCity) &&
+            (identical(other.sensivityTrass, sensivityTrass) ||
+                other.sensivityTrass == sensivityTrass) &&
+            (identical(other.offRadarDetector, offRadarDetector) ||
+                other.offRadarDetector == offRadarDetector) &&
+            (identical(other.smartCityTrass, smartCityTrass) ||
+                other.smartCityTrass == smartCityTrass));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, operationModeStatus, isAvtomute,
-      isForeground, profileStatus, settingsStatus);
+  int get hashCode => Object.hash(
+      runtimeType,
+      operationModeStatus,
+      isAvtomute,
+      isForeground,
+      profileStatus,
+      settingsStatus,
+      currentSliderValue,
+      kDiapazon,
+      kardon,
+      kDiapazonStatus,
+      kordonStatus,
+      sensivityCity,
+      sensivityTrass,
+      offRadarDetector,
+      smartCityTrass);
 
   @JsonKey(ignore: true)
   @override
@@ -201,7 +380,16 @@ abstract class _SettingsState extends SettingsState {
       final bool isAvtomute,
       final bool isForeground,
       final ProfileStatus profileStatus,
-      final SettingsStatus settingsStatus) = _$SettingsStateImpl;
+      final SettingsStatus settingsStatus,
+      final double currentSliderValue,
+      final bool kDiapazon,
+      final bool kardon,
+      final KordonStatus kDiapazonStatus,
+      final KordonStatus kordonStatus,
+      final double sensivityCity,
+      final double sensivityTrass,
+      final int offRadarDetector,
+      final int smartCityTrass) = _$SettingsStateImpl;
   const _SettingsState._() : super._();
 
   @override
@@ -214,6 +402,24 @@ abstract class _SettingsState extends SettingsState {
   ProfileStatus get profileStatus;
   @override
   SettingsStatus get settingsStatus;
+  @override
+  double get currentSliderValue;
+  @override
+  bool get kDiapazon;
+  @override
+  bool get kardon;
+  @override
+  KordonStatus get kDiapazonStatus;
+  @override
+  KordonStatus get kordonStatus;
+  @override
+  double get sensivityCity;
+  @override
+  double get sensivityTrass;
+  @override
+  int get offRadarDetector;
+  @override
+  int get smartCityTrass;
   @override
   @JsonKey(ignore: true)
   _$$SettingsStateImplCopyWith<_$SettingsStateImpl> get copyWith =>

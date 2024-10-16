@@ -6,6 +6,17 @@ class SettingsState with _$SettingsState {
       OperationModeStatus operationModeStatus,
       bool isAvtomute,
       bool isForeground,
-      ProfileStatus profileStatus,SettingsStatus settingsStatus) = _SettingsState;
+      ProfileStatus profileStatus,
+      SettingsStatus settingsStatus,
+      double currentSliderValue,
+      bool kDiapazon,
+      bool kardon,
+      KordonStatus kDiapazonStatus,
+      KordonStatus kordonStatus,
+      double sensivityCity,
+      double sensivityTrass,
+      int offRadarDetector,
+      int smartCityTrass,
+      ) = _SettingsState;
   const SettingsState._();
 }

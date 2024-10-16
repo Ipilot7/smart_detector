@@ -68,16 +68,14 @@ class SettingsPage extends StatelessWidget {
                 "Громкость приложения:",
               ),
               Slider(
-                value: 20,
+                value: state.currentSliderValue,
                 max: 100,
-                label: 20.round().toString(),
+                label: state.currentSliderValue.round().toString(),
                 activeColor: AppColors.green,
                 inactiveColor: AppColors.black,
                 thumbColor: AppColors.greyLight,
                 onChanged: (double value) {
-                  // setState(() {
-                  //   _currentSliderValue = value;
-                  // });
+                  bloc.add(ChangeSliderEvent(value));
                 },
               ),
               SettingsItemWidget(

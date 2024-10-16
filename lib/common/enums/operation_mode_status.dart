@@ -1,4 +1,3 @@
-
 enum OperationModeStatus {
   smart,
   city,

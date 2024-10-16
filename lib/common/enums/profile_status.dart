@@ -1,4 +1,3 @@
-
 enum ProfileStatus {
   russia,
   uzbekistan,

@@ -14,12 +14,14 @@ class SettingsItemWidget extends StatelessWidget {
     this.value = false,
     this.onChanged,
     this.trailingTap,
+    this.titleWidget,
   });
   final String title;
   final String? trailingText;
   final bool switcherOn, value;
   final void Function(bool)? onChanged;
   final void Function()? trailingTap;
+  final Widget? titleWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +30,11 @@ class SettingsItemWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            title,
-            style: AppTextStyles.body15w5,
-          ),
+          titleWidget ??
+              Text(
+                title,
+                style: AppTextStyles.body15w5,
+              ),
           switcherOn
               ? CustomSwicher(value: value, onChanged: onChanged)
               : GestureDetector(

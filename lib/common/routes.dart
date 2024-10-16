@@ -7,6 +7,7 @@ import 'package:smart_detector/presentation/page/permissions.dart';
 import 'package:smart_detector/presentation/page/search_detector.dart';
 import 'package:smart_detector/presentation/page/settings/operating_mode.dart';
 import 'package:smart_detector/presentation/page/settings/profile.dart';
+import 'package:smart_detector/presentation/page/settings/profile_settings.dart';
 import 'package:smart_detector/presentation/page/settings/settings.dart';
 import 'package:smart_detector/presentation/page/splash.dart';
 import 'package:smart_detector/presentation/page/term_and_conditions.dart';
@@ -21,6 +22,7 @@ class Routes {
   static String get settings => '/settings';
   static String get operatingMode => '/operatingMode';
   static String get profile => '/profile';
+  static String get profileSettings => '/profileSettings';
   static String get voicePachage => '/voicePachage';
   static String get soundsSignature => '/soundsSignature';
   static String get kBandSound => '/kBandSound';
@@ -121,6 +123,14 @@ class AppRouter {
           context: context,
           state: state,
           child: const ProfilePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.profileSettings,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const ProfileSettingsPage(),
         ),
       ),
     ],

@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:smart_detector/common/app_text_style.dart';
 import 'package:smart_detector/common/appcolors.dart';
-
+import 'package:smart_detector/common/extentions/extention.dart';
 
 class SignalSpeedometer extends StatelessWidget {
   final int speed;
@@ -23,33 +24,22 @@ class SignalSpeedometer extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'RD',
-                  style: TextStyle(color: Colors.green, fontSize: 20),
-                ),
-                SizedBox(width: 5),
-                Text(
-                  'K',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                SizedBox(width: 5),
-                Text(
-                  'MUT',
-                  style: TextStyle(color: Colors.orange, fontSize: 20),
-                ),
+                Text('RD',
+                    style: AppTextStyles.body20w5
+                        .copyWith(color: AppColors.green)),
+                5.g,
+                Text('K', style: AppTextStyles.body20w5),
+                5.g,
+                Text('MUT',
+                    style: AppTextStyles.body20w5
+                        .copyWith(color: AppColors.orange)),
               ],
             ),
-            Text(
-              '$speed',
-              style: const TextStyle(color: Colors.white, fontSize: 80),
-            ),
-            const Text(
-              'КМ/Ч',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
+            Text('$speed', style: AppTextStyles.body100w5),
+            Text('КМ/Ч', style: AppTextStyles.body20w5),
           ],
         ),
       ],

@@ -29,4 +29,9 @@ abstract class AppTextStyles {
       fontWeight: FontWeight.w500,
       fontSize: 30,
       color: Colors.white);
+  static TextStyle body100w5 = const TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontSize: 100,
+      color: Colors.white);
 }

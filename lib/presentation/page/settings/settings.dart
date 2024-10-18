@@ -103,7 +103,7 @@ class SettingsPage extends StatelessWidget {
                 title: 'Подключен',
                 trailingText: "Smart Detector D1",
                 trailingTap: () {
-                  // todo
+                  context.push(Routes.connectedTo);
                 },
               ),
               SettingsItemWidget(

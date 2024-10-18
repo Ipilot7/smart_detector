@@ -5,6 +5,11 @@ import 'package:smart_detector/presentation/page/device.dart';
 import 'package:smart_detector/presentation/page/home.dart';
 import 'package:smart_detector/presentation/page/permissions.dart';
 import 'package:smart_detector/presentation/page/search_detector.dart';
+import 'package:smart_detector/presentation/page/settings/connected_to/connaected_to.dart';
+import 'package:smart_detector/presentation/page/settings/connected_to/disconnect.dart';
+import 'package:smart_detector/presentation/page/settings/connected_to/firmware_version.dart';
+import 'package:smart_detector/presentation/page/settings/connected_to/update_firmware_info.dart';
+import 'package:smart_detector/presentation/page/settings/connected_to/updating_firmware.dart';
 import 'package:smart_detector/presentation/page/settings/operating_mode.dart';
 import 'package:smart_detector/presentation/page/settings/profile/profile.dart';
 import 'package:smart_detector/presentation/page/settings/profile/profile_settings.dart';
@@ -29,11 +34,11 @@ class Routes {
   static String get voicePackage => '/voicePackage';
   static String get voiceSignature => '/soundsSignature';
   static String get voiceKDiapazon => '/voiceKDiapazon';
-  static String get connectedTo => '/inspectorIsConnected';
-  static String get firmwareUpdateStep1 => '/firmwareUpdateStep1';
-  static String get firmwareUpdateStep2 => '/firmwareUpdateStep2';
-  static String get firmwareUpdateStep3 => '/firmwareUpdateStep3';
-  static String get disconnectAndUnlink => '/disconnectAndUnlink';
+  static String get connectedTo => '/connectedTo';
+  static String get firmwareVersion => '/firmwareVersion';
+  static String get updateFirmwareInfo => '/updateFirmwareInfo';
+  static String get updatingFirmware => '/updatingFirmware';
+  static String get disconnect => '/disconnect';
   static String get splash => '/splash';
   static String get home => '/';
 }
@@ -158,6 +163,46 @@ class AppRouter {
           context: context,
           state: state,
           child: const VoiceSignaturePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.connectedTo,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const ConnectedToPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.firmwareVersion,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const FirmwareVersionPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.updatingFirmware,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const UpdatingFirmwarePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.updateFirmwareInfo,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const UpdateFirmwareInfoPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.disconnect,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const DisconnectPage(),
         ),
       ),
     ],

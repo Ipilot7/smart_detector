@@ -47,7 +47,7 @@ class SettingsItemWidget extends StatelessWidget {
                             .copyWith(color: AppColors.trailingColor),
                       ),
                       10.g,
-                      Assets.icons.right.svg()
+                      if (trailingTap != null) Assets.icons.right.svg()
                     ],
                   ),
                 ),

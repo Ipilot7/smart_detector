@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:smart_detector/common/locale_data/hive_keys.dart';
 import 'package:smart_detector/common/locale_data/locale_model.dart';
+import 'package:smart_detector/presentation/logic/bloc/connected_to_bloc.dart';
 import 'package:smart_detector/presentation/logic/settings/settings_bloc.dart';
 import 'package:smart_detector/presentation/logic/permissions/permissions_cubit.dart';
 
@@ -31,6 +32,7 @@ Future<void> init() async {
 //Blocs
   di.registerFactory(() => PermissionsCubit());
   di.registerFactory(() => SettingsBloc());
+  di.registerFactory(() => ConnectedToBloc());
 
 //UseCases
   // di.registerLazySingleton(() => LoginUseCase(repository: di()));

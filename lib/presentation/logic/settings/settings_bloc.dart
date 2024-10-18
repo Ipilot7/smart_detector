@@ -5,6 +5,9 @@ import 'package:smart_detector/common/enums/kdiapazon_status.dart';
 import 'package:smart_detector/common/enums/operation_mode_status.dart';
 import 'package:smart_detector/common/enums/profile_status.dart';
 import 'package:smart_detector/common/enums/settings_status.dart';
+import 'package:smart_detector/common/enums/voice_kdiapazon.dart';
+import 'package:smart_detector/common/enums/voice_package_status.dart';
+import 'package:smart_detector/common/enums/voice_signature_status.dart';
 
 part 'settings_bloc.freezed.dart';
 part 'settings_event.dart';
@@ -26,7 +29,10 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
             0,
             0,
             40,
-            70)) {
+            70,
+            VoicePackageStatus.alena,
+            VoiceKDiapazonStatus.noSound,
+            VoiceSignatureStatus.noSound)) {
     on<ChangeOperationModeEvent>(_changeOperationMode);
     on<ChageAutoMuteEvent>(_chageAutoMuteEvent);
     on<ChageWorkOnForegroundEvent>(_chageWorkOnForegroundEvent);
@@ -41,6 +47,9 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     on<ChangeSensivityTrassEvent>(_changeSensivityTrass);
     on<ChangeSmartCityTrassEvent>(_changeSmartCityTrass);
     on<ChangeOffRadarDetectorEvent>(_changeOffRadarDetector);
+    on<ChangeVoicePackageEvent>(_changeVoicePackage);
+    on<ChangeVoiceKDiapazonEvent>(_changeVoiceKDiapazon);
+    on<ChangeVoiceSignatureEvent>(_changeVoiceSignature);
   }
 
   _changeOperationMode(ChangeOperationModeEvent event, emit) {
@@ -95,7 +104,9 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     if (event.value) {
       emit(state.copyWith(smartCityTrass: state.smartCityTrass + 1));
     } else {
-      emit(state.copyWith(smartCityTrass: state.smartCityTrass - 1));
+      if (state.smartCityTrass > 0) {
+        emit(state.copyWith(smartCityTrass: state.smartCityTrass - 1));
+      }
     }
   }
 
@@ -103,7 +114,21 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     if (event.value) {
       emit(state.copyWith(offRadarDetector: state.offRadarDetector + 1));
     } else {
-      emit(state.copyWith(offRadarDetector: state.offRadarDetector - 1));
+      if (state.offRadarDetector > 0) {
+        emit(state.copyWith(offRadarDetector: state.offRadarDetector - 1));
+      }
     }
+  }
+
+  _changeVoicePackage(ChangeVoicePackageEvent event, emit) {
+    emit(state.copyWith(voicePackageStatus: event.value));
+  }
+
+  _changeVoiceKDiapazon(ChangeVoiceKDiapazonEvent event, emit) {
+    emit(state.copyWith(voiceKDiapazonStatus: event.value));
+  }
+
+  _changeVoiceSignature(ChangeVoiceSignatureEvent event, emit) {
+    emit(state.copyWith(voiceSignatureStatus: event.value));
   }
 }

@@ -6,7 +6,7 @@ import 'package:smart_detector/common/components/custom_appbar.dart';
 import 'package:smart_detector/common/components/custom_button.dart';
 import 'package:smart_detector/common/components/custom_icon_button.dart';
 import 'package:smart_detector/common/components/textx.dart';
-import 'package:smart_detector/presentation/logic/bloc/settings_bloc.dart';
+import 'package:smart_detector/presentation/logic/settings/settings_bloc.dart';
 import 'package:smart_detector/presentation/widgets/radio_tabs.dart';
 import 'package:smart_detector/presentation/widgets/settings_item_widget.dart';
 

@@ -75,3 +75,17 @@ class ChangeSmartCityTrassEvent extends SettingsEvent {
   const ChangeSmartCityTrassEvent(this.value);
   final bool value;
 }
+
+class ChangeVoicePackageEvent extends SettingsEvent {
+  const ChangeVoicePackageEvent(this.value);
+  final VoicePackageStatus value;
+}
+
+class ChangeVoiceKDiapazonEvent extends SettingsEvent {
+  const ChangeVoiceKDiapazonEvent(this.value);
+  final VoiceKDiapazonStatus value;
+}
+class ChangeVoiceSignatureEvent extends SettingsEvent {
+  const ChangeVoiceSignatureEvent(this.value);
+  final VoiceSignatureStatus value;
+}

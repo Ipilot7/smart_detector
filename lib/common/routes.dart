@@ -6,9 +6,12 @@ import 'package:smart_detector/presentation/page/home.dart';
 import 'package:smart_detector/presentation/page/permissions.dart';
 import 'package:smart_detector/presentation/page/search_detector.dart';
 import 'package:smart_detector/presentation/page/settings/operating_mode.dart';
-import 'package:smart_detector/presentation/page/settings/profile.dart';
-import 'package:smart_detector/presentation/page/settings/profile_settings.dart';
+import 'package:smart_detector/presentation/page/settings/profile/profile.dart';
+import 'package:smart_detector/presentation/page/settings/profile/profile_settings.dart';
 import 'package:smart_detector/presentation/page/settings/settings.dart';
+import 'package:smart_detector/presentation/page/settings/voice_kdiapazon.dart';
+import 'package:smart_detector/presentation/page/settings/voice_package.dart';
+import 'package:smart_detector/presentation/page/settings/voice_signature.dart';
 import 'package:smart_detector/presentation/page/splash.dart';
 import 'package:smart_detector/presentation/page/term_and_conditions.dart';
 
@@ -23,10 +26,10 @@ class Routes {
   static String get operatingMode => '/operatingMode';
   static String get profile => '/profile';
   static String get profileSettings => '/profileSettings';
-  static String get voicePachage => '/voicePachage';
-  static String get soundsSignature => '/soundsSignature';
-  static String get kBandSound => '/kBandSound';
-  static String get inspectorIsConnected => '/inspectorIsConnected';
+  static String get voicePackage => '/voicePackage';
+  static String get voiceSignature => '/soundsSignature';
+  static String get voiceKDiapazon => '/voiceKDiapazon';
+  static String get connectedTo => '/inspectorIsConnected';
   static String get firmwareUpdateStep1 => '/firmwareUpdateStep1';
   static String get firmwareUpdateStep2 => '/firmwareUpdateStep2';
   static String get firmwareUpdateStep3 => '/firmwareUpdateStep3';
@@ -131,6 +134,30 @@ class AppRouter {
           context: context,
           state: state,
           child: const ProfileSettingsPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.voicePackage,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const VoicePackagePage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.voiceKDiapazon,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const VoiceKDiapazonPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.voiceSignature,
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const VoiceSignaturePage(),
         ),
       ),
     ],

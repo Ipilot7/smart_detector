@@ -17,6 +17,9 @@ class SettingsState with _$SettingsState {
       double sensivityTrass,
       int offRadarDetector,
       int smartCityTrass,
+      VoicePackageStatus voicePackageStatus,
+      VoiceKDiapazonStatus voiceKDiapazonStatus,
+      VoiceSignatureStatus voiceSignatureStatus,
       ) = _SettingsState;
   const SettingsState._();
 }

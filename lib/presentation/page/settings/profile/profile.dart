@@ -6,7 +6,7 @@ import 'package:smart_detector/common/components/textx.dart';
 import 'package:smart_detector/common/enums/profile_status.dart';
 import 'package:smart_detector/common/extentions/extention.dart';
 import 'package:smart_detector/common/routes.dart';
-import 'package:smart_detector/presentation/logic/bloc/settings_bloc.dart';
+import 'package:smart_detector/presentation/logic/settings/settings_bloc.dart';
 import 'package:smart_detector/presentation/widgets/custom_radio.dart';
 import 'package:smart_detector/presentation/widgets/settings_item_widget.dart';
 

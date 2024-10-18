@@ -31,6 +31,12 @@ mixin _$SettingsState {
   double get sensivityTrass => throw _privateConstructorUsedError;
   int get offRadarDetector => throw _privateConstructorUsedError;
   int get smartCityTrass => throw _privateConstructorUsedError;
+  VoicePackageStatus get voicePackageStatus =>
+      throw _privateConstructorUsedError;
+  VoiceKDiapazonStatus get voiceKDiapazonStatus =>
+      throw _privateConstructorUsedError;
+  VoiceSignatureStatus get voiceSignatureStatus =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingsStateCopyWith<SettingsState> get copyWith =>
@@ -57,7 +63,10 @@ abstract class $SettingsStateCopyWith<$Res> {
       double sensivityCity,
       double sensivityTrass,
       int offRadarDetector,
-      int smartCityTrass});
+      int smartCityTrass,
+      VoicePackageStatus voicePackageStatus,
+      VoiceKDiapazonStatus voiceKDiapazonStatus,
+      VoiceSignatureStatus voiceSignatureStatus});
 }
 
 /// @nodoc
@@ -87,6 +96,9 @@ class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
     Object? sensivityTrass = null,
     Object? offRadarDetector = null,
     Object? smartCityTrass = null,
+    Object? voicePackageStatus = null,
+    Object? voiceKDiapazonStatus = null,
+    Object? voiceSignatureStatus = null,
   }) {
     return _then(_value.copyWith(
       operationModeStatus: null == operationModeStatus
@@ -145,6 +157,18 @@ class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
           ? _value.smartCityTrass
           : smartCityTrass // ignore: cast_nullable_to_non_nullable
               as int,
+      voicePackageStatus: null == voicePackageStatus
+          ? _value.voicePackageStatus
+          : voicePackageStatus // ignore: cast_nullable_to_non_nullable
+              as VoicePackageStatus,
+      voiceKDiapazonStatus: null == voiceKDiapazonStatus
+          ? _value.voiceKDiapazonStatus
+          : voiceKDiapazonStatus // ignore: cast_nullable_to_non_nullable
+              as VoiceKDiapazonStatus,
+      voiceSignatureStatus: null == voiceSignatureStatus
+          ? _value.voiceSignatureStatus
+          : voiceSignatureStatus // ignore: cast_nullable_to_non_nullable
+              as VoiceSignatureStatus,
     ) as $Val);
   }
 }
@@ -171,7 +195,10 @@ abstract class _$$SettingsStateImplCopyWith<$Res>
       double sensivityCity,
       double sensivityTrass,
       int offRadarDetector,
-      int smartCityTrass});
+      int smartCityTrass,
+      VoicePackageStatus voicePackageStatus,
+      VoiceKDiapazonStatus voiceKDiapazonStatus,
+      VoiceSignatureStatus voiceSignatureStatus});
 }
 
 /// @nodoc
@@ -199,6 +226,9 @@ class __$$SettingsStateImplCopyWithImpl<$Res>
     Object? sensivityTrass = null,
     Object? offRadarDetector = null,
     Object? smartCityTrass = null,
+    Object? voicePackageStatus = null,
+    Object? voiceKDiapazonStatus = null,
+    Object? voiceSignatureStatus = null,
   }) {
     return _then(_$SettingsStateImpl(
       null == operationModeStatus
@@ -257,6 +287,18 @@ class __$$SettingsStateImplCopyWithImpl<$Res>
           ? _value.smartCityTrass
           : smartCityTrass // ignore: cast_nullable_to_non_nullable
               as int,
+      null == voicePackageStatus
+          ? _value.voicePackageStatus
+          : voicePackageStatus // ignore: cast_nullable_to_non_nullable
+              as VoicePackageStatus,
+      null == voiceKDiapazonStatus
+          ? _value.voiceKDiapazonStatus
+          : voiceKDiapazonStatus // ignore: cast_nullable_to_non_nullable
+              as VoiceKDiapazonStatus,
+      null == voiceSignatureStatus
+          ? _value.voiceSignatureStatus
+          : voiceSignatureStatus // ignore: cast_nullable_to_non_nullable
+              as VoiceSignatureStatus,
     ));
   }
 }
@@ -278,7 +320,10 @@ class _$SettingsStateImpl extends _SettingsState {
       this.sensivityCity,
       this.sensivityTrass,
       this.offRadarDetector,
-      this.smartCityTrass)
+      this.smartCityTrass,
+      this.voicePackageStatus,
+      this.voiceKDiapazonStatus,
+      this.voiceSignatureStatus)
       : super._();
 
   @override
@@ -309,10 +354,16 @@ class _$SettingsStateImpl extends _SettingsState {
   final int offRadarDetector;
   @override
   final int smartCityTrass;
+  @override
+  final VoicePackageStatus voicePackageStatus;
+  @override
+  final VoiceKDiapazonStatus voiceKDiapazonStatus;
+  @override
+  final VoiceSignatureStatus voiceSignatureStatus;
 
   @override
   String toString() {
-    return 'SettingsState(operationModeStatus: $operationModeStatus, isAvtomute: $isAvtomute, isForeground: $isForeground, profileStatus: $profileStatus, settingsStatus: $settingsStatus, currentSliderValue: $currentSliderValue, kDiapazon: $kDiapazon, kardon: $kardon, kDiapazonStatus: $kDiapazonStatus, kordonStatus: $kordonStatus, sensivityCity: $sensivityCity, sensivityTrass: $sensivityTrass, offRadarDetector: $offRadarDetector, smartCityTrass: $smartCityTrass)';
+    return 'SettingsState(operationModeStatus: $operationModeStatus, isAvtomute: $isAvtomute, isForeground: $isForeground, profileStatus: $profileStatus, settingsStatus: $settingsStatus, currentSliderValue: $currentSliderValue, kDiapazon: $kDiapazon, kardon: $kardon, kDiapazonStatus: $kDiapazonStatus, kordonStatus: $kordonStatus, sensivityCity: $sensivityCity, sensivityTrass: $sensivityTrass, offRadarDetector: $offRadarDetector, smartCityTrass: $smartCityTrass, voicePackageStatus: $voicePackageStatus, voiceKDiapazonStatus: $voiceKDiapazonStatus, voiceSignatureStatus: $voiceSignatureStatus)';
   }
 
   @override
@@ -346,7 +397,13 @@ class _$SettingsStateImpl extends _SettingsState {
             (identical(other.offRadarDetector, offRadarDetector) ||
                 other.offRadarDetector == offRadarDetector) &&
             (identical(other.smartCityTrass, smartCityTrass) ||
-                other.smartCityTrass == smartCityTrass));
+                other.smartCityTrass == smartCityTrass) &&
+            (identical(other.voicePackageStatus, voicePackageStatus) ||
+                other.voicePackageStatus == voicePackageStatus) &&
+            (identical(other.voiceKDiapazonStatus, voiceKDiapazonStatus) ||
+                other.voiceKDiapazonStatus == voiceKDiapazonStatus) &&
+            (identical(other.voiceSignatureStatus, voiceSignatureStatus) ||
+                other.voiceSignatureStatus == voiceSignatureStatus));
   }
 
   @override
@@ -365,7 +422,10 @@ class _$SettingsStateImpl extends _SettingsState {
       sensivityCity,
       sensivityTrass,
       offRadarDetector,
-      smartCityTrass);
+      smartCityTrass,
+      voicePackageStatus,
+      voiceKDiapazonStatus,
+      voiceSignatureStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -389,7 +449,10 @@ abstract class _SettingsState extends SettingsState {
       final double sensivityCity,
       final double sensivityTrass,
       final int offRadarDetector,
-      final int smartCityTrass) = _$SettingsStateImpl;
+      final int smartCityTrass,
+      final VoicePackageStatus voicePackageStatus,
+      final VoiceKDiapazonStatus voiceKDiapazonStatus,
+      final VoiceSignatureStatus voiceSignatureStatus) = _$SettingsStateImpl;
   const _SettingsState._() : super._();
 
   @override
@@ -420,6 +483,12 @@ abstract class _SettingsState extends SettingsState {
   int get offRadarDetector;
   @override
   int get smartCityTrass;
+  @override
+  VoicePackageStatus get voicePackageStatus;
+  @override
+  VoiceKDiapazonStatus get voiceKDiapazonStatus;
+  @override
+  VoiceSignatureStatus get voiceSignatureStatus;
   @override
   @JsonKey(ignore: true)
   _$$SettingsStateImplCopyWith<_$SettingsStateImpl> get copyWith =>

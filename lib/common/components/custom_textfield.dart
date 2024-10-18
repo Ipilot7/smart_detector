@@ -73,7 +73,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         focusNode: widget.focusNode,
         // maxLines: widget.maxLines,
         minLines: widget.minLines,
-        style: widget.style ?? AppTextStyles.body16w4,
+        style: widget.style ?? AppTextStyles.body15w5,
         controller: widget.controller,
         onFieldSubmitted: widget.onSubmitted,
         onChanged: widget.onChanged,
@@ -124,7 +124,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               borderRadius: BorderRadius.circular(widget.radius ?? 20)),
           border: InputBorder.none,
           hintStyle: widget.hintStyle ??
-              AppTextStyles.body16w4
+              AppTextStyles.body15w5
                   .copyWith(color: Colors.black.withOpacity(.5)),
           hintText: widget.hintText,
         ),
